@@ -1,0 +1,70 @@
+  body{
+     
+    background-image: url("https://images.unsplash.com/photo-1598214887283-1b96ceceea96?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 90vh; 
+    z-index: 100;
+    margin: 0;
+
+}
+
+.topnav {
+  padding-top: 100px;
+  padding-left: 900px;
+  overflow: hidden;
+  margin-right: 20px;
+  /*font-size: 35px;*/
+}
+.hover-effect{
+  font-size: 39px;
+  color: #fff;
+  word-spacing: 35px;
+}
+
+.topnav ul {
+  list-style-type: none;
+  display: none;
+ 
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.topnav ul li {
+  display:block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+.topnav span:hover + ul {
+  display: block;
+}
+
+.cuisine-list,.chat-list,.health-list
+{
+display: none;
+
+}
+.hover-effect:hover+.cuisine-list,
+.hover-effect:hover+.chat-list,
+.hover-effect:hover+.health-list{
+  display:block;
+   top: 25px; 
+  left: 0; 
+ 
+  background-color: #fff; 
+  border: 6px solid #ccc; 
+  padding: 10px;
+  
+}
+
+h1{
+  font-size: 65px;
+  font-style: italic;
+  color: #fff;
+  
+}
+.bar input{
+ font-size: 35px;
+ border-radius: 10px;
+ position:fixed;
+}
