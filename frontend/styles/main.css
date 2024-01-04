@@ -1,12 +1,64 @@
-  body{
-     
-    background-image: url("https://images.unsplash.com/photo-1598214887283-1b96ceceea96?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    height: 90vh; 
-    z-index: 100;
-    margin: 0;
+html {
+  height: 170%;
+}
 
+body {
+  background-image: url("https://burst.shopifycdn.com/photos/flatlay-iron-skillet-with-meat-and-other-food.jpg?width=1000&format=pjpg&exif=0&iptc=0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.image-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  height: 35vh;
+  perspective: 1000px;
+  z-index: 1000;
+  margin-top: 400px; 
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Adjust the max-width as needed */
+  border-radius: 15%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: rotateY(10deg) scale(1.1);
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; 
 }
 
 .topnav {
@@ -14,57 +66,68 @@
   padding-left: 900px;
   overflow: hidden;
   margin-right: 20px;
-  /*font-size: 35px;*/
+  display: flex;
+  justify-content: space-between;
 }
-.hover-effect{
+
+.hover-effect {
   font-size: 39px;
   color: #fff;
-  word-spacing: 35px;
+  position: relative;
 }
 
 .topnav ul {
+  position: relative;
+  top: 40%;
+  left: 5%;
   list-style-type: none;
   display: none;
- 
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+
 .topnav ul li {
-  display:block;
+  display: block;
   padding: 10px;
   text-decoration: none;
   color: #333;
+  text-align: center;
 }
+
 .topnav span:hover + ul {
   display: block;
 }
 
-.cuisine-list,.chat-list,.health-list
-{
-display: none;
-
+.cuisine-list,
+.chat-list,
+.health-list {
+  display: none;
 }
+
 .hover-effect:hover+.cuisine-list,
 .hover-effect:hover+.chat-list,
-.hover-effect:hover+.health-list{
-  display:block;
-   top: 25px; 
-  left: 0; 
- 
-  background-color: #fff; 
-  border: 6px solid #ccc; 
+.hover-effect:hover+.health-list {
+  display: block;
+  top: 25px;
+  left: 0;
+  background-color: #fff;
+  border: 6px solid #ccc;
   padding: 10px;
-  
 }
 
-h1{
+h1 {
   font-size: 65px;
   font-style: italic;
   color: #fff;
-  
+  position: absolute;
+  top: 15%;
+  z-index: 101;
 }
-.bar input{
- font-size: 35px;
- border-radius: 10px;
- position:fixed;
+
+.bar input {
+  top: 35%;
+  font-size: 35px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 101;
 }
